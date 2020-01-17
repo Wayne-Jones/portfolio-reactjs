@@ -4,7 +4,6 @@ module.exports = {
       es6: true,
     },
     extends: [
-      'plugin:react/recommended',
       'airbnb',
     ],
     globals: {
@@ -20,6 +19,9 @@ module.exports = {
     },
     plugins: [
       'react',
+      "react-hooks",
+      "jsx-a11y",
+      "import",
     ],
     rules: {
       "linebreak-style": 0,
