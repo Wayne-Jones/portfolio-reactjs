@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './components/header/header';
+import Landing from './components/landing/landing';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Landing />
     </div>
   );
 }
