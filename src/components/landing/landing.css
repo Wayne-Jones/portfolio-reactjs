@@ -1,6 +1,8 @@
-.landing {
-    background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow:hidden;
+#ReactBackgroundSlider > figure {
+    filter: brightness(0.5);
+}
+
+.landing{
+  color: #FFF;
+  text-align: center;
 }
