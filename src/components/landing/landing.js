@@ -1,10 +1,12 @@
 import React from 'react';
 import BackgroundSlider from 'react-background-slider';
-import { Box, Container } from '@material-ui/core/';
+import {
+  Box, Grid, Typography, Divider,
+} from '@material-ui/core/';
 import './landing.css';
 
 class Landing extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       title: 'Wayne Jones',
@@ -31,11 +33,17 @@ class Landing extends React.Component {
           duration={8}
           transition={1}
         />
-        <Box>
-          <Container className="landing">
-            <h1>{title}</h1>
-            <p>{description}</p>
-          </Container>
+        <Box className="landing">
+          <Grid container>
+            <Grid item xs={12}>
+              <Typography variant="h3" gutterBottom>{title}</Typography>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography variant="h2" gutterBottom>{description}</Typography>
+            </Grid>
+          </Grid>
+          <Divider variant="middle" />
+
         </Box>
       </>
     );
