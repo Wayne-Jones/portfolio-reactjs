@@ -1,8 +1,11 @@
 import React from 'react';
 import BackgroundSlider from 'react-background-slider';
 import {
-  Box, Grid, Typography, Divider,
+  Box, Grid, Typography, Divider, Button, ButtonGroup,
 } from '@material-ui/core/';
+import {
+  Facebook, Twitter, LinkedIn, YouTube, Instagram,
+} from '@material-ui/icons';
 import './landing.css';
 
 class Landing extends React.Component {
@@ -36,14 +39,24 @@ class Landing extends React.Component {
         <Box className="landing">
           <Grid container>
             <Grid item xs={12}>
-              <Typography variant="h3" gutterBottom>{title}</Typography>
+              <Typography variant="h4" gutterBottom>{title}</Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography variant="h2" gutterBottom>{description}</Typography>
+              <Typography variant="h3" gutterBottom>{description}</Typography>
             </Grid>
           </Grid>
           <Divider variant="middle" />
-
+          <div>
+            <Facebook />
+            <Twitter />
+            <LinkedIn />
+            <YouTube />
+            <Instagram />
+          </div>
+          <ButtonGroup size="large" variant="outlined" aria-label="text button group">
+            <Button>Photography</Button>
+            <Button>Engineering</Button>
+          </ButtonGroup>
         </Box>
       </>
     );
