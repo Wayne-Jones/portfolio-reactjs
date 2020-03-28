@@ -7,7 +7,7 @@ import {
   makeStyles,
 } from '@material-ui/core/styles';
 import {
-  Facebook, Twitter, LinkedIn, YouTube, Instagram, Block,
+  Facebook, Twitter, LinkedIn, YouTube, Instagram,
 } from '@material-ui/icons';
 
 
