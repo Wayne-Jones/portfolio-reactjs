@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import BackgroundSlider from 'react-background-slider';
+import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 import {
-  Grid, Typography, Divider, Button, ButtonGroup,
+  Grid, Typography, Divider, Button,
 } from '@material-ui/core/';
-import {
-  makeStyles,
-} from '@material-ui/core/styles';
+
 import {
   Facebook, Twitter, LinkedIn, YouTube, Instagram,
 } from '@material-ui/icons';
@@ -19,9 +19,19 @@ const useStyles = makeStyles({
   buttonGroup: {
     textAlign: 'center',
     display: 'block',
+    '& a': {
+      textDecoration: 'none',
+      color: 'inherit',
+    },
     '& button': {
       color: '#FFF',
       border: '1px solid rgba(255, 255, 255, 0.23)',
+      padding: '7px 21px',
+      fontSize: '0.9375rem',
+    },
+    '& button:hover': {
+      color: '#68c0ff',
+      border: '1px solid rgba(104, 192, 255, 0.23)',
     },
   },
   socialIcons: {
@@ -29,6 +39,13 @@ const useStyles = makeStyles({
     '& svg': {
       fontSize: '30px',
       margin: '0.5rem',
+    },
+    '& a': {
+      textDecoration: 'none',
+      color: 'inherit',
+    },
+    '& a:hover': {
+      color: '#68c0ff',
     },
   },
 });
@@ -59,16 +76,16 @@ function Landing() {
           <Typography align="center" variant="h2" gutterBottom>{description}</Typography>
           <Divider variant="middle" light />
           <div className={classes.socialIcons}>
-            <Facebook />
-            <Twitter />
-            <LinkedIn />
-            <YouTube />
-            <Instagram />
+            <a aria-label="Facebook Link" href="https://facebook.com/"><Facebook /></a>
+            <a aria-label="Twitter Link" href="https://twitter.com/wayneoflife"><Twitter /></a>
+            <a aria-label="LinkedIn Link" href="https://www.linkedin.com/in/wayne-jones"><LinkedIn /></a>
+            <a aria-label="Youtube Link" href="https://www.youtube.com/NamixKuro"><YouTube /></a>
+            <a aria-label="Instagram Link" href="https://www.instagram.com/wayneoflife/"><Instagram /></a>
           </div>
-          <ButtonGroup size="large" variant="outlined" aria-label="text button group" className={classes.buttonGroup}>
-            <Button>Photography</Button>
-            <Button>Engineering</Button>
-          </ButtonGroup>
+          <div className={classes.buttonGroup}>
+            <Link to="/Photography"><Button>Photography</Button></Link>
+            <Link to="/Engineering"><Button>Engineering</Button></Link>
+          </div>
         </Grid>
       </Grid>
     </>
