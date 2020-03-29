@@ -30,4 +30,4 @@ jobs:
       run: |
         yarn install
         yarn build
-        npx netlify-cli deploy --dir=public --prod
+        npx netlify-cli deploy --dir=build --prod
